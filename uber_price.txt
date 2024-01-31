@@ -1,0 +1,28 @@
+1. write a class to calculate the Uber price.
+
+
+class Uber {
+    constructor(km) {
+        this.km=km;
+        this.price=km*3;
+        console.log(this.km, this.price);
+    }
+
+    getPrice() {
+        console.log(`Ride cost is ${this.price}`)
+    }
+
+    applyDiscount() {
+        console.log("Discount calculation")
+        let discount=(25/this.price)*100
+        let priceAfterDiscount= this.price-discount
+        return `As a privilage customer, i got a discount and price after discount is Rs. ${priceAfterDiscount.toFixed()}`
+
+    }
+
+}
+let ride= new Uber(30);
+ride.getPrice();
+ride.applyDiscount();
+console.log(ride.applyDiscount())
+
